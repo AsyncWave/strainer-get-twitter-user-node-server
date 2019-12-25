@@ -3,7 +3,7 @@ const Twitter = require('twit');
 const app = express();
 const path = require('path');
 
-const PORT = 3000;
+const PORT = 4000;
 const HOST = '0.0.0.0'
 const client = new Twitter({
     consumer_key: 'ZZaq1WNWyrct8TC6KhBHPZg3F',
@@ -26,7 +26,7 @@ app.get('/exists/:name', (req, res) => {
     client
       .get('users/lookup', params)
       .then(response => {
-        res.send(response);
+        res.send(response.data);
         // console.log('response', response)
       })
       .catch(error => {
@@ -35,6 +35,6 @@ app.get('/exists/:name', (req, res) => {
     }); 
 });
 
-app.listen(process.env.PORT || 4000, function(){
+app.listen(process.env.PORT || PORT, function(){
   console.log('Your node js server is running');
 });
