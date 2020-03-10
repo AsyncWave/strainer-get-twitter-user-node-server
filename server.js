@@ -6,10 +6,10 @@ const path = require('path');
 const PORT = 4000;
 const HOST = '0.0.0.0'
 const client = new Twitter({
-    consumer_key: 'ZZaq1WNWyrct8TC6KhBHPZg3F',
-    consumer_secret: 'DAVIqeOOw0iU9r3zczCD9BJcykyGTbccetw67KOZ3rPzXM3t8v',
-    access_token: '376020588-fPbhUUYEVvfrHHwjvKth0fkInHKjIwa2pbIl8HNJ',
-    access_token_secret: 'vHZyi5tWus8UgXICtWrz82em1Dv9R2eS8wQ398jMreJMM'
+    consumer_key: '',
+    consumer_secret: '',
+    access_token: '',
+    access_token_secret: ''
 });
 
 app.use(require('cors')());
